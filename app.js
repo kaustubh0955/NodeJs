@@ -14,6 +14,7 @@ const shopRoutes = require("./routes/shop");
 //}); //use => to add a new middleware function...it accepts array of request handlers
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
